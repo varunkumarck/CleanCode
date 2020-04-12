@@ -29,7 +29,7 @@ public class StudentMarkSheet {
 
     Float totalMarks = getTotalMarks();
 
-    //SRP, instead of asking Result From ExamResult and print the entire job is given to
+    //SRP, instead of asking Result From ExamResult and print, the entire job is given to
     //ExamResult as it know how to deal with it.
     ExamResult.calculateAndPrint(totalMarks, markList.size());
   }
