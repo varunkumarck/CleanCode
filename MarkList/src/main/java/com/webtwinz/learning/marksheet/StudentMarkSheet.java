@@ -28,9 +28,10 @@ public class StudentMarkSheet {
         .forEach(subject -> System.out.printf("%20s : %2s %n", subject, markList.get(subject)));
 
     Float totalMarks = getTotalMarks();
-    ExamResult
-        .getResult(totalMarks, markList.size())
-        .printResult();
+
+    //SRP, instead of asking Result From ExamResult and print the entire job is given to
+    //ExamResult as it know how to deal with it.
+    ExamResult.calculateAndPrint(totalMarks, markList.size());
   }
 
   public Float getTotalMarks() {
