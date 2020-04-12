@@ -10,7 +10,8 @@ import org.slf4j.LoggerFactory;
 
 public enum ExamResult {
 
-  //IMPROVEMENT: consider minimum mark for each subject
+  //IMPROVEMENT: consider minimum mark for each subject.
+  //Use BigDecimal instead of Float as float should not be used for comparison.
 
   DISTINCTION(buildCriteriaWithMinimumAndMaximumLimit(79.99f, 100.0f), true),
   FIRST_CLASS(buildCriteriaWithMinimumAndMaximumLimit(59.99f, 80.0f), true),
