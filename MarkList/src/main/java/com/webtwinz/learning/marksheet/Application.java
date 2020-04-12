@@ -23,6 +23,7 @@ public class Application {
 
     //try-with-resource automatically closes the consoleReader, this is the preferred way.
     try (BufferedReader reader = new BufferedReader(new InputStreamReader(System.in))) {
+      //Improvement : Avoid imperative way of iteration.
       for (int i = 0; i < noOfStudents; i++) {
         Student student = readStudentDetailsUsing(reader);
 
