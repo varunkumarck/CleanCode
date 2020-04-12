@@ -57,8 +57,7 @@ public class Application {
   }
 
   private static void printAllStudentsMarkSheet(List<StudentMarkSheet> studentMarkSheetList) {
-    for (StudentMarkSheet studentMarkSheet : studentMarkSheetList) {
-      studentMarkSheet.print();
-    }
+    //Use Method Reference for concise code, as shown below
+    studentMarkSheetList.forEach(StudentMarkSheet::print);
   }
 }
