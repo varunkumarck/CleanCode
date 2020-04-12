@@ -2,7 +2,7 @@
 Demonstrates some principles of OOP and ways to write Clean code
 
 ## Build and Run MarkList Application
-   * cd to the root of the application where pom.xml is present
+   * cd to MarkList folder
    * mvn assembly:assembly
    * cd to the directory where jar is created
    * java -jar mark-list-1.0.jar
