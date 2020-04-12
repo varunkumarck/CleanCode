@@ -48,6 +48,10 @@ public enum ExamResult {
         .orElseThrow(getNoCriteriaForResultFoundExceptionSupplier(totalMarks, noOfSubjects));
   }
 
+  public static void calculateAndPrint(float totalMarks, int noOfSubjects) {
+    getResult(totalMarks, noOfSubjects).printResult();
+  }
+
   private static Supplier<NoCriteriaForResultFoundException> getNoCriteriaForResultFoundExceptionSupplier(
       float totalMarks, int noOfSubjects) {
     return () -> new NoCriteriaForResultFoundException(
