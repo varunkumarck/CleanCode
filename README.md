@@ -1,5 +1,6 @@
 # CleanCode
-Demonstrates some principles of OOP, Functional Programming and ways to write Clean code
+Demonstrates some principles of OOP, Functional Programming and ways to write Clean code\
+Motivation is to learn the art of writing Clean Code and help others to learn as well.
 
 ## Build and Run MarkList Application
    * cd to MarkList folder
