@@ -38,9 +38,9 @@ public enum ExamResult {
   //This is an example of avoiding if-else ladder or switch cases and making the maintenance easy
   public static ExamResult getResult(float totalMarks, int noOfSubjects) {
 
-    //Power of functional programming, no manual iteration.
+    //Power of functional programming, no imperative operations.
     //It returns the first Result whose criteria evaluates to true and throws exception if no such
-    //criteria is present.
+    //criteria is present, say here -ve marks and marks above 100 are not handled!!!, yeah fix it..
     return Arrays.stream(ExamResult.values())
         .filter(result -> result.criteria.test(totalMarks, noOfSubjects))
         .findFirst()

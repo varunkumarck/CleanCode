@@ -11,15 +11,16 @@ public class StudentMarkSheet {
   private Map<Subject, Float> markList;
   private MarkReader markReader;
 
-  // Advantage of markReader is we can easily inject any kind of MarkReader,
-  // say from database or REST API etc.
+  //Open Closed Principle.. See any kind of Reader can be used to read Marks.
+  //In case if data needs to be read from File this class remains unchanged and we need to simply
+  //write a FileMarkReader class and inject that here.
   public StudentMarkSheet(Student student, MarkReader markReader) {
     this.student = student;
     this.markReader = markReader;
   }
 
   //TASK: Come up with a MarkWriter class and give the end user the flexibility
-  //to write the result to console or write the result to Database. Hint: Check MarkReader
+  //to write the result to console or or to a Database. Hint: Check MarkReader
   public void print() {
     student.print();
     //Avoid imperative looping where ever possible and use Declarative looping as follows
